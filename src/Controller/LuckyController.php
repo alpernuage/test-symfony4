@@ -22,7 +22,7 @@ class LuckyController extends AbstractController
     public function hello($name)
     {
         return new Response(
-            "<html><body>Hello</body></html>"
+            "<html><body>Hello $name</body></html>"
         );
     }
 }

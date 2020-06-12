@@ -1,6 +1,29 @@
 <html>
-	<body>Lucky number:
-		{{ number }}
-		toto
+	<body>
+		<h1>
+			<a href="{{ path("app_lucky_number", {"id":666} ) }}">{{ name | upper | reverse}}</a>
+		</h1>
+		Lucky number:{{ number }}
+
+		<h2>{{ "now"|date("Y-m-d") }}</h2>
+
+		{% if nickname is defined %}
+			{{nickname}}
+		{% endif %}
+
+
+		{% if number > 3  %}
+			Number greater than 3
+		{% else %}
+			Number less than 3
+		{% endif %}
+
+		<ul>
+			{% for item in myList %}
+				<li {% if loop.index0 is odd %} style="background-color:grey" {% endif %}>
+					{{ item }}
+				</li>
+			{% endfor %}
+		</ul>
 	</body>
 </html>
