@@ -19,7 +19,9 @@
 		<h1>All Posts</h1>
 		<ul>
 			{% for item in items %}
-				<li>{{item.title}}:{{item.date|date("d-m-Y")}}</li>
+				<li>{{item.title}}
+					:
+					{{item.date|date("d-m-Y")}}</li>
 			{% endfor %}
 		</ul>
 	</div>
